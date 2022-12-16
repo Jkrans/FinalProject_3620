@@ -1,0 +1,111 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-image: url('/pictures/snow.jpeg');
+    background-size: cover;
+}
+
+
+
+.nav-login {
+  background-color: white !important;
+  background-image: none;
+}
+
+.custom-font-card-text {
+    font-size: 1.5rem;
+}
+
+.holiday-font{
+  font-family: 'Holiday', 'Courier New', Courier, monospace;
+}
+
+.background-color-card {
+    background: rgba(197, 7, 0, 0);
+}
+
+.custom-width{
+    width: 55rem;
+}
+
+.custom-nav-color {
+  background-color: #1e6c10;
+}
+
+.neu-shadow-inset:hover {
+  box-shadow: 
+  2px 2px 4px 0 rgba(0, 0, 0, 0.3) inset,
+    -1px -1px 3px 0 rgba(100, 100, 100, 0.5) inset;
+}
+
+.neu-shadow-inset {
+  box-shadow: 
+    2px 2px 4px 0 rgba(0, 0, 0, 0.3),
+    -1px -1px 3px 0 rgba(100,100,100,.5);
+}
+
+.neu-shadow {
+    box-shadow: 
+      12px 12px 16px 0 rgba(0, 0, 0, 0.45), /*bottom right*/
+      -8px -8px 12px 0 rgba(100, 100, 100, 0.5);; /*top left*/
+}
+
+/*
+  image classes
+*/
+  .reg-img { 
+    position: relative;
+  }
+  
+  .reg-img::before {
+    content: "";
+    background-image: url('/pictures/red-ornament.jpeg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index:-1;
+    opacity: 0.9;
+  }
+
+  .update-img { 
+    position: relative;
+  }
+  
+  .update-img::before {
+    content: "";
+    background-image: url('/pictures/tree-ornament.jpeg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index:-1;
+    opacity: 0.7;
+  }
+
+  .login-img { 
+    background-image: url('/pictures/presents.jpeg'); 
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .countdown-header {
+    color: rgba(151, 80, 80, 0.75); 
+    font-size: 0.9rem; 
+    
+  }
+
+  .countdown-time {
+    color: rgba(1, 1, 1, 0.6); 
+    font-size: 0.8rem; 
+  }
+
+  #navbar-brand-text {
+    color: black;
+  }
+
+ 
+  

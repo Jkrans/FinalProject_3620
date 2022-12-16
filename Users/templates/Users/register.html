@@ -1,0 +1,22 @@
+{% extends 'mainapp/base.html'%}
+{%block body%}
+<div class="container-fluid"> 
+    <div class="mt-5 d-flex justify-content-center flex-nowrap">
+        <div class ="mt-5 border rounded p-5 bg-image reg-img">
+            <h1 class="holiday-font text-center text-white">Sign Up</h2>
+            <form class="" method="POST">
+                {%csrf_token%}
+                {% for field in form  %}
+                    <div class="form-group">
+                        {{field.errors}}     
+                        {{field}}        
+                    </div>
+                {% endfor %}
+                
+
+                <button type="submit" class="btn btn-outline-primary col-12">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}

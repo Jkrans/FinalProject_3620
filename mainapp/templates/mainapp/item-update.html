@@ -1,0 +1,30 @@
+{% extends 'mainapp/base.html'%}
+{%block body%}
+<div class="mt-5 d-flex justify-content-center flex-nowrap">
+    <div class ="mt-5 border-0 rounded p-5 bg-image update-img neu-shadow" alt="Closeup of Christmas tree with red and sparkling gold ornament.">
+        <h1 class="holiday-font text-center text-white">Update Gift</h2>
+            <form method="POST">
+                {% csrf_token %}
+                    <div class="form-group"> 
+                        {{form.recipient}}
+                    </div>
+                    <div class="form-group"> 
+                        {{form.gift_name}}
+                    </div>
+                    <div class="form-group"> 
+                        {{form.price}}
+                    </div>                
+                    <div class="form-group"> 
+                            {{form.type}}
+                    </div>                
+                    <div class="form-group"> 
+                        {{form.year}}
+                    </div>            
+                    <div class="form-group"> 
+                        <button type="submit" class="btn col-12 btn-outline-primary">Update Gift</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,8 @@
+{% extends 'mainapp/base.html'%}
+{%block body%}
+{% if user.is_authenticated %} 
+    {% for item in recipients  %}
+        <h1>{{item}}</h1>
+    {% endfor %}
+{% endif %}
+{%endblock%}

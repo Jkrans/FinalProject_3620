@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html'%}
+{% block body %}
+
+{% if  item.user == user %} <!--Make sure only the correct user is able to see details-->
+    <div class="container-fluid"> 
+        <div class="mt-3 d-flex justify-content-center flex-nowrap">
+            <div style='background: rgba(0, 255, 0, 0.25); width: 35rem' class ="mt-5 rounded p-5 neu-shadow">
+            <div class="card background-color-card border-0">
+            <div class="col card-body">
+                <h1 class="card-title text-center holiday-font pb-1">{{item.gift_name|capfirst}}</h1>
+                <h2>${{item.price}}</h2>
+                <h3>Short Description: <br>{{item.type}}</h3>
+                <h3>For: {{item.recipient|capfirst}}</h3>
+                <h3>Year: {{item.year}}</h3>
+                <div class="d-flex justify-content-between pt-2">
+                    <a href="{% url 'mainapp:update_item' item.id %}" class="mt-3 btn btn-outline-primary col-6">Edit</a>
+                    <a href="{% url 'mainapp:delete_item' item.id %}" class="mt-3 btn btn-outline-danger col-4">Delete</a>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <p>Oops! No peaking at other's presents. <a href="{% url 'mainapp:index' %}">Click here to return to your gift bag</a></p>
+{% endif %}
+
+{% endblock %}

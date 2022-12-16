@@ -1,0 +1,48 @@
+{% extends 'mainapp/base.html'%}
+{%block body%}
+<div class="container-fluid"> 
+    <div class="mt-3 d-flex justify-content-center flex-nowrap">
+        <div style='background: rgba(197, 7, 0, 0.25);' class ="mt-5 border-0 neu-shadow rounded p-5">
+            <h1 class="holiday-font text-center text-black">Add Gift</h2>
+            <form method="POST">
+                {% csrf_token %}
+                    <div class="form-group">
+                        {{form.recipient}}
+                    </div>
+                    <div class="form-group"> 
+                        {{form.gift_name}}
+                    </div>
+                    <div class="form-group">  
+                        {{form.price}}
+                    </div>
+                    <div class="form-group"> 
+                        {{form.type}}
+                    </div>
+                    <div class="form-group"> 
+                        {{form.year}}
+                    </div>
+                <div class="form-group d-flex justify-content-between"> 
+                    <button type="submit" name="submit and go to gift list" class="btn btn-outline-primary col-5">Save</button>
+                    <button type="submit" name = "submit-create-item" class="btn btn-outline-primary col-6">Save and Add Another</button>
+                </div>
+            </form>
+            <h3 class="mt-5 holiday-font text-center text-black">Add Recipient</h3>
+            <p class="" style='max-width: 30rem'>Nobody in the dropdown above? No worries, you can add people here:</p>
+            <form method="POST">
+                {% csrf_token %}                
+                <div class="form-group"> 
+                    {{recipient.name}}  
+                </div>                   
+                
+                <div class="form-group">    
+                    <button type="submit" class="btn btn-outline-primary col-12">Add Person</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+{%endblock%}
