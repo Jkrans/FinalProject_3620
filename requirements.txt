@@ -70,3 +70,5 @@ wrapt==1.14.0
 wsproto==1.0.0
 yarl==1.7.2
 zipp==3.7.0
+python-dotenv==1.0.0  # Replace with your installed version
+
