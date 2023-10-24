@@ -1,13 +1,13 @@
 body {
     font-family:'Courier New', Courier, monospace;
-    background-image: url('/pictures/snow.jpeg');
+    background-image: url('/static/snow.jpeg');
     background-size: cover;
 }
 
 
 
 .nav-login {
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
   background-image: none;
 }
 
@@ -58,7 +58,7 @@ body {
   
   .reg-img::before {
     content: "";
-    background-image: url('/pictures/red-ornament.jpeg');
+    background-image: url('/static/red-ornament.jpeg');
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -75,7 +75,7 @@ body {
   
   .update-img::before {
     content: "";
-    background-image: url('/pictures/tree-ornament.jpeg');
+    background-image: url('/static/tree-ornament.jpeg');
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -87,7 +87,7 @@ body {
   }
 
   .login-img { 
-    background-image: url('/pictures/presents.jpeg'); 
+    background-image: url('/static/presents.jpeg'); 
     background-size: cover;
     height: 100vh;
   }

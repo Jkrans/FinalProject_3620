@@ -1,1 +1,1 @@
-web: gunicorn FinalProject_3620.wsgi
+web: gunicorn mysite.wsgi
