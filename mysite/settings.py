@@ -21,10 +21,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['santasbag.up.railway.app']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['santasbag.up.railway.app', '127.0.0.1:8000']
 
-CSRF_TRUSTED_ORIGINS = ['https://santasbag.up.railway.app']
+CSRF_TRUSTED_ORIGINS = [
+    'https://santasbag.up.railway.app', 'http://127.0.0.1:8000/']
 
 CSRF_COOKIE_SECURE = False
 
@@ -80,8 +81,18 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('PGDATABASE'),
+        'USER': os.environ.get('PGUSER'),
+        'PASSWORD': os.environ.get('PGPASSWORD'),
+        'HOST': os.environ.get('PGHOST'),
+        'PORT': os.environ.get('PGPORT'),
+    }
 }
+
+print("DATABASE_URL:", os.environ.get('DATABASE_URL'))
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
