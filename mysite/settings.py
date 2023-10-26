@@ -24,7 +24,7 @@ DEBUG = True
 # ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['santasbag.up.railway.app']
 
-CSRF_TRUSTED_ORIGINS = ['santasbag.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['http://santasbag.up.railway.app']
 
 CSRF_COOKIE_SECURE = False
 
