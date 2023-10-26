@@ -26,7 +26,7 @@ ALLOWED_HOSTS = ['santasbag.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['santasbag.up.railway.app']
 
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
 
 
 # Application definition
