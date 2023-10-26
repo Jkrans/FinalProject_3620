@@ -73,5 +73,6 @@ zipp==3.7.0
 python-dotenv==1.0.0  # Replace with your installed version
 whitenoise==6.6.0  # Replace x.y.z with the version you are using
 dj_database_url==2.1.0
+psycopg2==2.9.9
 
 
