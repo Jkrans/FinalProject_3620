@@ -17,6 +17,10 @@ def index(request):
     context = {
         'gift_list': gift_list
     }
+    print("*******" + str(gift_list))
+    print("*******" + str(paginator.page_range))
+    print("*******" + str(page))
+
     return render(request, 'mainapp/index.html', context)
 
 
